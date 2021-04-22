@@ -22,9 +22,11 @@ This speeds up the process of checking every number since we can instead increme
 
 The primes follow the following distribution (as an upper bound) `x / ln(x)` where x is the number of primes we are searching for. 
 So we search an inversely proportional number of numbers before reaching our desired amount of prime numbers.
-Therefore the runtime Complexity is `O(2^n)` just for searching the appropriate amount of numbers.
+Therefore the runtime Complexity is ~`O(2^n)` just for searching the appropriate amount of numbers.
 Checking the prime divisors at every number is `1 + 2 + .... + n` since we want n primes. 
 This sequence is bounded above by `O(n^2)` so our final worst case (which is not a tight bound - since a tight bound on the number of primes is an open question in mathematics) is approximately **O(n^2 * 2^n)**.
+
+We only use O(n) additional space for the list of primes we are returning.
 
 ## Code
 ```
